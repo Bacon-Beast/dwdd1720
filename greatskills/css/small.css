@@ -1,0 +1,100 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;  
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: .5rem 2vw;
+    align-items: center;
+    max-width: 60rem;
+
+}
+header h1 {
+    font-size: 1rem;
+    padding-left: .5rem;
+}
+main{
+    margin: 1rem 2vw;
+}
+section.who {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    max-width: 60rem;
+}
+
+section.who p {
+    margin: 0;
+
+}
+
+section.about {
+    max-width: 60rem;
+    display: flex;
+    background-color: #456;
+    padding: .5rem;
+    
+}
+section.about p {
+    margin: 0;
+}
+
+section.about ul {
+    margin: 0;
+    padding: 0;
+}
+
+section.about div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: .5rem;
+    width: 100%;
+}
+
+section.about div ul {
+    background-color: lightslategray;
+    border-radius: 10px;
+    padding: .5rem;
+    list-style-position: inside;
+    box-shadow: inset 0 0 10px #777;
+}
+
+h2{ 
+    font-size: 1rem;
+}
+
+div.assignments {
+    padding: 1rem 2%;
+    max-width: 60rem;
+    text-align: center;
+}
+
+div.assignments a {
+    display: block;
+    padding: .8rem;
+    margin-bottom: .5rem;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    border-radius: 7px;
+    color: #456;
+    text-decoration: none;
+    
+}
+
+div.assignments a:hover {
+    background-color: #ddd;
+}
+
+footer{
+    text-align: center;
+    padding: .5rem 2vw;
+}
