@@ -1,0 +1,188 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Quicksand", sans-serif;
+  --lightWeight: 400;
+  --heavyWeight: 700;
+  --primaryColor: #2b7a78;
+
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+
+nav {
+    position: sticky;
+    top: 0px;
+    background-color: var(--primaryColor);
+}
+
+nav ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+nav a {
+    padding: .8rem .5rem;
+    display: block;
+    text-decoration: none;
+    color: #def2f1;
+    font-weight: var(--heavyWeight)
+}
+
+nav a:hover {
+    background-color: #3aafa9;
+    color: #feffff;
+}
+
+
+/* THIS IS THE ABOUT SECTION */
+
+section#about {
+    background-color: #3aafa9;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#about h1 {
+    color: #feffff;
+    font-size: 2.3rem;
+}
+section#about h2 {
+    font-size: 1rem;
+    color: #def2f1;
+}
+
+/* THIS IS THE PROJECTS SECTION */
+
+section#projects {
+    background-color: #2b7a78;
+    min-height: 100vh;
+    padding: 50px;
+}
+section#projects h2 {
+    font-size: 2.3rem;
+}
+div.theParent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.theParent a {
+    flex-basis: 100%;
+    padding: 1rem 2vw;
+}
+
+section#projects figure{
+    margin: 0;
+    width: 100%;
+    border-radius: 1vw;
+    background-color: #def2f1;
+}
+
+figcaption {
+    
+    text-align: center;
+    margin-top: 0px;
+    padding: 4px;
+    
+    border-radius: 6px; 
+
+}
+
+figure figcaption  {
+    text-decoration: none !important;
+}
+
+section#projects figure:hover {
+    background-color: #17252a;
+    color: #def2f1;
+    text-decoration: none;
+}
+figcaption:hover {
+    background-color: #17252a;
+    color: #def2f1;
+}
+
+section#projects img {
+    width: 100%;
+    border-top-left-radius: 6px; 
+    border-top-right-radius: 6px;
+}
+
+section#projects h2{
+    color: white;
+    text-align: center;
+}
+
+
+
+/* THIS IS THE CONTACT SECTION */
+
+section#contact {
+    background-color: #17252a;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section#contact h2 {
+    color: #def2f1;
+    text-align: center;
+    font-size: 2.3rem;
+}
+section#contact ul {
+    display: flex;
+    justify-content: space-around;
+}
+section#contact li {
+    list-style-type: none;
+}
+
+section#contact a {
+    color: #def2f1;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+section#contact a img{
+ height: 50px;
+ display: block;
+ width: 100%;
+}
+
+section#contact a:hover {
+    text-decoration: underline;
+    transform: translateY(4px);
+}
+
+footer {
+   padding: 10px;
+    background-color: #17252a;
+}
+
+footer p, footer span {
+    font-size: 1rem;
+    text-align: center;
+    color: #def2f1;
+    padding: .5rem 0;
+    height: 8vh;
+}
