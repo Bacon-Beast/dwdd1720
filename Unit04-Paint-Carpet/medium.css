@@ -1,0 +1,6 @@
+@media only screen and (min-width: 35rem) {
+    section div {
+        margin: 1rem 4%;
+        flex-basis: 42%;
+    }
+} /* end media query*/
