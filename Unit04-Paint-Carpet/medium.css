@@ -1,6 +1,18 @@
 @media only screen and (min-width: 35rem) {
-    section div {
-        margin: 1rem 4%;
-        flex-basis: 42%;
+
+    .data {
+        max-width: 30rem;
     }
-} /* end media query*/
+    section {
+        display: flex;
+        margin: 0 auto;
+    }
+    section div {
+        flex-basis: 46%;
+        
+    }
+    section div h2 {
+        text-align: center;
+    }
+        
+    } /* end media query*/

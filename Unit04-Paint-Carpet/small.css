@@ -4,92 +4,35 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-:root {
-    font-family: 'Roboto', sans-serif;
-    --background-color: #1C1C1E;
-    --light-background-color: #ffffff;
-    --primary-text-color: #E5E5E5;
-    --secondary-text-color: #E2E2E2;
-    --accent-red: #8B0000;
-    --highlight-color: #333333;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    background-color: var(--background-color);
-}
-
-main {
-    flex: 1 0 auto;
-}
-
-header h1 {
-    text-align: center;
-    margin: 0;
-    padding: 1rem 2%;
-    font-weight: 600;
-    font-size: 1.5rem;
-    background-color: var(--accent-red);
-    color: var(--primary-text-color);
-}
-
 .data {
-    margin: 1rem 4%;
-    padding: 1rem 4%;
-    background-color: var(--light-background-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    max-width: 20rem;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--secondary-text-color);
-}
-.data label {
-    display: block;
-    margin: .5rem 0;
-}
-.data input {
-    width: 60px;
-}
-.data button {
-    width: 100%;
-    padding: .5rem 0;
-    margin: 1rem 0;
-    background: var(--highlight-color);
-    background: linear-gradient(rgb(51, 51, 51) 15%, rgb(80, 80, 80));
-    color: white;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px var(--highlight-color);
-    font-weight: 600;
-    font-size: 1.4rem;
-}
-
-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column;
+    margin: 0 auto;
 }
-section div {
-    margin: 1rem 4%;
-    flex-basis: 96%;
-    background-color: var(--light-background-color);
-    border-radius: 0 0 10px 10px;
+input {
+    max-width: 2rem;
+    margin: 3px;
 }
-section h2 {
-    font-size: 1.15rem;
-    text-align: center;
-    margin: 0;
-    padding: .5rem 0;
-    background-color: var(--accent-red);
-    color: var(--primary-text-color);
+#quality {
+    margin: 3px 0px;
+    padding: 2px;
 }
-section ul {
-    list-style-type: circle;
+button {
+    padding: 4px;
+    border: 0;
+    border-radius: 3px;
+    background-color: rgb(114, 114, 229);
+    color: white;
 }
-
-footer {
-    background-color: var(--accent-red);
-    padding: .5rem 2%;
-    color: var(--primary-text-color);
+body {
+    padding: 27px;
+    font-family: "Red Hat Text";
+}
+header {
+    color: rgb(114, 114, 229);
     text-align: center;
 }
