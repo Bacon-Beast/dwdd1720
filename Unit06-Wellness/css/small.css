@@ -23,29 +23,3 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 #newProfile input[type="submit"] {
   background-color: red;
 }
-
-/* Current Profile Styling */
-
-#myProfile {
-
-}
-
-#myProfile section {
-  background-color: pink;
-  border: 1px solid green;
-  border-radius: 10px;
-  margin: 10px;
-  text-align: center;
-}
-
-#myProfile img {
-
-}
-
-#myProfile p {
-
-}
-
-#myProfile button {
-
-}

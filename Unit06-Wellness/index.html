@@ -9,19 +9,22 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="newProfile">
-        <p>Please complete your emotional profile</p>
+        <p>Please complete your D&D profile</p>
         <form id="profileForm">
-            <label>First: <input type="text" name="first" required></label>
-            <label>Last: <input type="text" name="last" required></label>
-            <label>Emotional State:
+            <label>Character name: <input type="text" name="first" required></label>
+            <label>Race: <input type="text" name="last" required></label>
+            <label>Alignment:
                 <select id="physical">
-                    <option value="https://openmoji.org/data/color/svg/1F600.svg">Happy</option>
-                    <option value="https://openmoji.org/data/color/svg/1F92A.svg">Sassy</option>
-                    <option value="https://openmoji.org/data/color/svg/1F47F.svg">Angry</option>
-                    <option value="https://openmoji.org/data/color/svg/E282.svg">Bored</option>
+                    <option value="https://openmoji.org/data/color/svg/1F600.svg">Good</option>
+                    <option value="https://openmoji.org/data/color/svg/1F92A.svg">Lawful</option>
+                    <option value="https://openmoji.org/data/color/svg/1F47F.svg">Evil</option>
+                    <option value="https://openmoji.org/data/color/svg/E282.svg">Neutral</option>
                 </select>
             </label>
             <input type="submit" value="Save Profile" id="saveProfile">
@@ -33,7 +36,7 @@
     <div id="myProfile">
         <section>
             <img src="" id="emoji" alt="emotion icon">
-            <p><span id="first"></span> <span id="last"></span> is currently feeling <span id="emotion">Happy</span></p>
+            <p><span id="first"></span> <span id="last"></span> is <span id="emotion">Happy</span></p>
         </section>
         <button id="delProfile">Delete Profile</button>
     </div>

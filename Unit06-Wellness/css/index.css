@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+body {
+    font-family: 'Cinzel', serif;
+    background: url('images/scroll_texture.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #f4e9d8;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px black;
+}
+
+#newProfile, #myProfile {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+}
+
+form label, p {
+    display: block;
+    margin: 10px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+button, input[type="submit"] {
+    background: #8b0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #a52a2a;
+}
+
+.hideMe {
+    display: none;
+}
+
+.showMe {
+    display: block;
+}
