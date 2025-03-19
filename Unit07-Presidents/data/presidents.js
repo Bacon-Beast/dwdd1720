@@ -37,7 +37,7 @@ export const presidents = [
   {   "name": "Lyndon B. Johnson", "born": 1908, "died": 1973, "took_office": "1963-11-22", "left_office": "1969-01-20", "party": "Democratic" , "photo":"36-johnson.jpg"},
   {   "name": "Richard Nixon", "born": 1913, "died": 1994, "took_office": "1969-01-20", "left_office": "1974-08-09", "party": "Republican" , "photo":"37-nixon.jpg"},
   {   "name": "Gerald Ford", "born": 1913, "died": 2006, "took_office": "1974-08-09", "left_office": "1977-01-20", "party": "Republican" , "photo":"38-ford.jpg"},
-  {   "name": "Jimmy Carter", "born": 1924, "died": null, "took_office": "1977-01-20", "left_office": "1981-01-20", "party": "Democratic" , "photo":"39-carter.jpg"},
+  {   "name": "Jimmy Carter", "born": 1924, "died": 2024, "took_office": "1977-01-20", "left_office": "1981-01-20", "party": "Democratic" , "photo":"39-carter.jpg"},
   {   "name": "Ronald Reagan", "born": 1911, "died": 2004, "took_office": "1981-01-20", "left_office": "1989-01-20", "party": "Republican" , "photo":"40-reagan.jpg"},
   {   "name": "George H. W. Bush", "born": 1924, "died": 2018, "took_office": "1989-01-20", "left_office": "1993-01-20", "party": "Republican" , "photo":"41-bush.jpg"},
   {   "name": "Bill Clinton", "born": 1946, "died": null, "took_office": "1993-01-20", "left_office": "2001-01-20", "party": "Democratic" , "photo":"42-clinton.jpg"},
