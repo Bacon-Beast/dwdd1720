@@ -56,8 +56,4 @@ fetch("../Unit11/data/starships (2).json")
     myViewer.textContent = ''
     myViewer.appendChild(myFigure)
 
-   } // end viewer
- 
-
-
-   
+   } // end viewer  
