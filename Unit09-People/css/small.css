@@ -4,6 +4,12 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+header h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5em;
+  }
+
 #peopleHere {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +21,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     width: 180px;
     border-radius: 15px;
     border: solid 3px;
-    background: rgba(0,0,0,0.7);
+    background: ffff(0,0,0,0.7);
     box-shadow: 0 0 15px rgba(0,255,255,0.5);
     transition: all 0.3s ease;
     overflow: hidden;
@@ -34,12 +40,6 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   
   #peopleHere figcaption {
     text-align: center;
-    padding: 8px 0;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.1em;
-    color: #00ffff;
-    text-shadow: 0 0 5px rgba(0,255,255,0.7);
-    letter-spacing: 1px;
   }
   
   #peopleHere figure.female {
@@ -59,24 +59,34 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   
   .filter-buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    padding: 10px 0;
   }
   
   .filter-buttons button {
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s;
-  }
-  
-  .filter-buttons button:hover {
-    background-color: #ddd;
-  }
-  
-  .filter-buttons button.active {
-    background-color: #007bff;
-    color: white;
-  }
+    background: linear-gradient(135deg, #0f0f0f, #232323);
+    color: #00ffea;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 234, 0.8), 0 0 20px rgba(0, 255, 234, 0.5) inset;
+    border: 1px solid rgba(0, 255, 234, 0.5);
+}
+
+.filter-buttons button:hover {
+    background: linear-gradient(135deg, #1e1e1e, #393939);
+    box-shadow: 0 0 15px rgba(0, 255, 234, 1), 0 0 25px rgba(0, 255, 234, 0.7) inset;
+    transform: scale(1.05);
+}
+
+.filter-buttons button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgba(0, 255, 234, 1);
+}
