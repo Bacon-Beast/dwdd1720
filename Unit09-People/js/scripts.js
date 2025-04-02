@@ -1,63 +1,69 @@
-//add links to the html
-const myNavigation = document.querySelector('nav')
-const myViewer = document.querySelector('main')
+/**
+ * @typedef {Object} Person
+ * @property {string} name
+ * @property {string} height
+ * @property {string} mass
+ * @property {string} hair_color
+ * @property {string} skin_color
+ * @property {string} eye_color
+ * @property {string} gender
+ * @property {string} url
+ */
 
+/** @type {Person[]} */
+import { people } from '../data/people.js'
 
+// Store all created figures
+const figures = [];
 
-//go grab the data and then WAIT for the result.
-fetch("../Unit11/data/starships (2).json")
-    .then((response) => response.json ())
-    .then((shipArray) => {
-        console.log(shipArray)
-        populateNav(shipArray)
-    })
-
-
-   //populate the nav bar
-   function populateNav(allShips) {
-    console.log(allShips)
-    allShips.forEach(ship => {
-        let myButton = document.createElement('button')
-        console.log(ship.name)
-        myButton.textContent = ship.name
-        myButton.addEventListener('click', () => showShip(ship))
-        myNavigation.appendChild(myButton)
-    })//end of loop
-
-   } //end of nav populate
-
-   // ship viewer
-
-   function showShip(shipData) {
-    console.log(shipData)
-    //create a figure an its parts
-    let myFigure = document.createElement('figure')
-    let myImage = document.createElement('img')
-    let myCaption = document.createElement('figcaption')
+function createFigure(person) {
+    const figure = document.createElement('figure');
+    const img = document.createElement('img');
+    const caption = document.createElement('figcaption');
     
-    //assign data to the figure
-    console.log(shipData.url)
-    let urlArray = shipData.url.split('/')
-    console.log(urlArray[5])
-    myImage.src=`https://starwars-visualguide.com/assets/img/starships/${urlArray[5]}.jpg`
-    myCaption.textContent = shipData.name
+    const personId = person.url.match(/\/(\d+)\/$/)[1];
+    img.src = `https://starwars.dgmuvu.com/characters/${personId}.jpg`;
+    img.alt = person.name;
+    caption.textContent = person.name;
 
-//error checking for image
-    myImage.addEventListener('error', () => {
-        myImage.src = "https://starwars-visualguide.com/assets/img/big-placeholder.jpg"
-        myCaption.textContent = `The ${shipData.name} was destroyed in a recent battle` 
-    })
+    // Assign gender class
+    switch (person.gender) {
+        case "female":
+            figure.className = "female";
+            break;
+        case "male":
+            figure.className = "male";
+            break;
+        default:
+            figure.className = "other";
+    }
 
-    //assemble the figure
-    myFigure.appendChild(myImage)
-    myFigure.appendChild(myCaption)
+    figure.appendChild(img);
+    figure.appendChild(caption);
+    return figure;
+}
 
-    //add the figure to the html
-    myViewer.textContent = ''
-    myViewer.appendChild(myFigure)
+function filterPeople(gender) {
+    figures.forEach(figure => {
+        const shouldShow = gender === 'all' || figure.classList.contains(gender);
+        figure.style.display = shouldShow ? 'block' : 'none';
+    });
+}
 
-   } // end viewer
- 
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('peopleHere');
+    if (!container) throw new Error('People container not found');
 
+    // Create all figures initially
+    people.forEach(person => {
+        const figure = createFigure(person);
+        container.appendChild(figure);
+        figures.push(figure);
+    });
 
-   
+    // Set up filter buttons
+    document.getElementById('all').addEventListener('click', () => filterPeople('all'));
+    document.getElementById('female').addEventListener('click', () => filterPeople('female'));
+    document.getElementById('male').addEventListener('click', () => filterPeople('male'));
+    document.getElementById('other').addEventListener('click', () => filterPeople('other'));
+});

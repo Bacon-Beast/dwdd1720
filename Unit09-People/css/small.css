@@ -4,55 +4,89 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../images/d23qx3t-efba32fe-67f0-4289-90a0-a9fe6c26f387.jpg);
+header h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5em;
+  }
 
-}
-
-header h1{
-    color:black;
-    text-align: center;
-    background-color: orange;
-}
-
-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-nav button{
-    width: 100%;
-    background-color: orange;
-
-}
-
-nav button:hover {
-    background-color: rgb(223, 225, 127);
-
-}
-
-main figure {
-    margin: 0;
-    width: 100%;
+#peopleHere {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #peopleHere figure {
+    margin: 15px;
     padding: 10px;
-}
-main figure img{
+    width: 180px;
+    border-radius: 15px;
+    border: solid 3px;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  #peopleHere figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,255,255,0.8);
+  }
+  
+  #peopleHere img {
     width: 100%;
-    max-width: 600px;
-   display: block;
-   margin: 0 auto;
-
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  #peopleHere figcaption {
+    text-align: center;
+  }
+  
+  #peopleHere figure.female {
+    border: solid 4px pink;
+    color: pink;
+  }
+  
+  #peopleHere figure.male {
+    border: solid 4px blue;
+    color: blue;
+  }
+  
+  #peopleHere figure.other {
+    border: solid 4px green;
+    color: green;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+  }
+  
+  .filter-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0f0f0f, #232323);
+    color: #00ffea;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 234, 0.8), 0 0 20px rgba(0, 255, 234, 0.5) inset;
+    border: 1px solid rgba(0, 255, 234, 0.5);
 }
 
-main figcaption {
-    color: white;
-    text-align: center;
-
-
+.filter-buttons button:hover {
+    background: linear-gradient(135deg, #1e1e1e, #393939);
+    box-shadow: 0 0 15px rgba(0, 255, 234, 1), 0 0 25px rgba(0, 255, 234, 0.7) inset;
+    transform: scale(1.05);
 }
-footer{
-    background-color:orange;
-    color:black;
-    text-align: center;
+
+.filter-buttons button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 20px rgba(0, 255, 234, 1);
 }
