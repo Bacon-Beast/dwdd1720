@@ -1,0 +1,6 @@
+@media only screen and (min-width: 35rem) {
+    nav button {
+      flex-basis: 23%;
+    }
+      
+  } /* end media query*/
