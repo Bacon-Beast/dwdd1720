@@ -29,8 +29,11 @@ header {
 
 body.list .parent section {
     flex-direction: row;
-    flex: 0 1 100%;
+    flex: 0 1 90%;
+    max-width: 800px;
     align-items: center;
+    margin: 0 auto 20px;
+    padding: 15px;
 }
 .parent section {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
@@ -48,6 +51,16 @@ body.list .parent section {
     transform: translateY(-5px);
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+    margin-top: 30px;
+    font-family: "Audiowide", sans-serif;
+    font-size: 0.9rem;
+}
+
 .parent section p {
     color: #00ffff;
     margin: 5px 0;
@@ -55,12 +68,14 @@ body.list .parent section {
 }
 
 .parent section img {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 225px;
     object-fit: cover;
     filter: grayscale(30%) contrast(110%);
     transition: all 0.3s ease;
     margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
 }
 
 .parent section:hover img {

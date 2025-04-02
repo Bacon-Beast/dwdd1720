@@ -43,6 +43,11 @@ for (let x = 0; x < movieLength; x++) {
   movieDirector.classList.add("movie-info");
   cardText.appendChild(movieDirector);
 
+  let movieProducer = document.createElement("p");
+  movieProducer.innerHTML = `<strong>Producer:</strong> ${films[x].producer}`;
+  movieProducer.classList.add("movie-info");
+  cardText.appendChild(movieProducer);
+
   let movieRelease = document.createElement("p");
   movieRelease.innerHTML = `<strong>Released:</strong> ${films[x].release_date}`;
   movieRelease.classList.add("movie-info");
