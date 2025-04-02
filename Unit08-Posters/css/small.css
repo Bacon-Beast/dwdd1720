@@ -13,11 +13,17 @@ header {
 }
 .parent {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 20px;
     width: 100%;
+}
+
+body.grid .parent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .parent section {
@@ -28,12 +34,24 @@ header {
 }
 
 body.list .parent section {
-    flex-direction: row;
-    flex: 0 1 90%;
+    flex-direction: column;
+    width: 90%;
     max-width: 800px;
-    align-items: center;
     margin: 0 auto 20px;
     padding: 15px;
+    align-items: center;
+}
+
+body.list .parent section .card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    flex: 1;
+}
+
+body.list .parent section p {
+    margin: 8px 0;
 }
 .parent section {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
