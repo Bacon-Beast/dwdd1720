@@ -3,11 +3,20 @@ const myNavigation = document.querySelector('nav');
 const myViewer = document.querySelector('main');
 
 //go grab the data and then W A I T for the result.
-fetch("../starships.json")
-  .then((response) => response.json())
+fetch("starships.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then((shipArray) => {
     console.log(shipArray);
     populateNav(shipArray);
+  })
+  .catch((error) => {
+    console.error('Error loading starships:', error);
+    document.querySelector('.loading').textContent = 'Failed to load starships. Please try again later.';
   });
 
 // populate the nav bar
