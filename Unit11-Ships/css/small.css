@@ -5,54 +5,67 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../images/d23qx3t-efba32fe-67f0-4289-90a0-a9fe6c26f387.jpg);
-
-}
-
-header h1{
-    color:black;
-    text-align: center;
-    background-color: orange;
+    font-family: 'Orbitron', sans-serif;
+    background-image: url(../images/space-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 1.5rem;
+    border-bottom: 1px solid #ff0000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-nav button{
-    width: 100%;
-    background-color: orange;
-
+nav button {
+    background: transparent;
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    padding: 0.75rem .5rem;
+    margin: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 10px;
+    text-align: center;
 }
 
 nav button:hover {
-    background-color: rgb(223, 225, 127);
-
+    background: #ff0000;
+    color: #0a0a0a;
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
 }
 
-main figure {
-    margin: 0;
-    width: 100%;
-    padding: 10px;
-}
-main figure img{
-    width: 100%;
-    max-width: 600px;
-   display: block;
-   margin: 0 auto;
-
+main {
+    padding: 2rem;
+    background-color: rgba(10, 10, 10, 0.7);
+    border: 1px solid #ff0000;
+    margin: 2rem;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
-main figcaption {
-    color: white;
-    text-align: center;
-
-
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px #ff0000; }
+    50% { box-shadow: 0 0 20px #ff0000; }
+    100% { box-shadow: 0 0 5px #ff0000; }
 }
-footer{
-    background-color:orange;
-    color:black;
-    text-align: center;
+
+nav button, main {
+    animation: pulse 3s infinite;
 }
