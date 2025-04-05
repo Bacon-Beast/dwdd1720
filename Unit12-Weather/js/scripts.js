@@ -5,7 +5,7 @@ const parentTag = document.querySelector('#weatherCard')
 //writing a default zipcode
 let zip = localStorage.getItem('myZipCode')
 if (zip == null) {
-    let defaultZip = "83127"
+    let defaultZip = "10007" // Arkham, MA
     localStorage.setItem('myZipCode',defaultZip )
     zip = defaultZip
 }// end if
@@ -29,7 +29,7 @@ function currentWeather(weatherResults) {
 
 //add the correct town name
 const myTown = document.querySelector('#town')
-myTown.textContent = `Weather for ${weatherResults.name}`
+myTown.textContent = `The accursed skies of ${weatherResults.name}`
 
 //current date
 const myDate = document.createElement('p')
@@ -59,7 +59,7 @@ theSettings.addEventListener('click', () => {
 //set the new zip
 const myButton = document.querySelector('#applyZip')
 myButton.addEventListener('click', () => {
-    console.log("you clicked me")
+    console.log("The veil between worlds is pierced...")
     theModalBox.className = ""
     let theZipCode = document.querySelector('#newZip').value
     if (theZipCode.length === 5) {
