@@ -1,0 +1,108 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #000000;
+}
+
+header {
+    background: #F797D0; /* JoJo red */
+    color: #ffffff; /* Gold */
+    padding: 1rem 2%;
+    border-bottom: 3px solid #EB008B; /* JoJo blue */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 0 #EB008B;
+    font-weight: 900;
+}
+
+nav {
+    background-color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav button {
+    flex-basis: 48%;
+    margin: .5rem 1%;
+    padding: 1rem 0;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-color: #D71820;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#viewer {
+    margin: .5rem 2%;
+    border-radius: 11px;
+    border: 3px solid #EB008B;
+    background-color: white;
+    padding: 1rem;
+}
+
+.part-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#viewer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #E40010;
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .part-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #viewer img {
+        max-width: 80%;
+        margin-right: 1rem;
+    }
+}
+
+.jojo-section {
+    padding: 1rem;
+}
+
+.parts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.part {
+    border: 2px solid #E40010;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #FFD700;
+    color: #EB008B;
+}
+
+.part h3 {
+    margin-top: 0;
+    color: #EB008B;
+}
+
+footer {
+    text-align: center;
+    background: #F797D0;
+    color: #FFD700;
+    padding: 1rem;
+    border-top: 3px solid #EB008B;
+}
